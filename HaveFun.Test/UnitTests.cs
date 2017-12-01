@@ -89,5 +89,21 @@ namespace HaveFun.Test
             Assert.AreEqual((1234 + 45678).ToString(), result);
         }
 
+        [TestMethod]
+        public void Substring_Test()
+        {
+            int result = Problems.Substring("asdf", "df");
+
+            Assert.AreEqual(2, result);
+        }
+
+        [TestMethod]
+        public void Substring_Test2()
+        {
+            int result = Problems.Substring("asdf", "asd");
+
+            Assert.AreEqual(0, result);
+        }
+
     }
 }

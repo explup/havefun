@@ -210,18 +210,22 @@ namespace HaveFun
             while(i>=0 
                 && i <= firstStr.Length - secondStr.Length)
             {
-                bool match = false;
                 k = i;
                 while(j >=0 
                     && j < secondStr.Length
                     && firstStr[k] == secondStr[j])
                 {
-                    
                     k++;
                     j++;
                 }
+                if (j == secondStr.Length)
+                {
+                    return i;
+                }
+
                 i++;
             }
+            return -1;
 
         }
 
